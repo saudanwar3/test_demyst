@@ -7,12 +7,8 @@
 
 import Foundation
 
-enum MediaType: Hashable {
-    case image(URL)
-    case video(URL)
-}
-
-struct Post: Identifiable, Hashable {
+struct Post: Identifiable {
     let id = UUID()
-    let media: [MediaType]
+    let mediaURL: String
+    let isVideo: Bool
 }
